@@ -1,17 +1,15 @@
 import React, { useState } from "react";
 import { Github, Gitlab, Key } from "lucide-react";
+import { useNavigate } from "react-router-dom";
 
 const SigninPage = () => {
   const [activeTab, setActiveTab] = useState("SAAS");
-
-
-
+  const navigate = useNavigate();
   return (
     <div className="min-h-screen bg-gray-50 p-4 lg:p-0">
       <div className="container mx-auto flex flex-col lg:flex-row lg:items-center lg:justify-between">
         {/* Left side with metrics */}
-        <div>
-          
+        <div className="bg-white">
           <div className="p-6 max-w-3xl relative hidden xl:block bg-white">
             <div className="bg-white p-6 rounded-3xl shadow-[0_4px_40px_rgba(0,0,0,0.07)] border border-gray-200">
               <div className="border-b border-gray-200 pb-6 mb-6">
@@ -89,14 +87,15 @@ const SigninPage = () => {
         <div className="lg:w-1/2 mt-8 lg:mt-32">
           <div className="max-w-md mx-auto bg-white p-8 rounded-lg shadow-sm">
             <div className="text-center mb-6">
-              <div className="flex flex-row ml-28 font-semibold">
+              <button className="flex flex-row ml-28 font-semibold ">
                 <img
                   src="https://media.licdn.com/dms/image/v2/D560BAQGncbvGj9h-YA/company-logo_200_200/company-logo_200_200/0/1700642866542/codeant_ai_logo?e=2147483647&v=beta&t=n7FJ33btckE3cs83Lg38lOnUKRwOKkAyeCv8sE-Nkww"
                   alt="CodeAnt AI"
                   className="h-8 inline-block mb-4"
-                />{" "}
+                />
+
                 <p>CodeAnt AI</p>
-              </div>
+              </button>
 
               <h1 className="text-2xl font-bold">Welcome to CodeAnt AI</h1>
             </div>
@@ -128,11 +127,17 @@ const SigninPage = () => {
             {/* Sign In Options */}
             {activeTab === "SAAS" ? (
               <div className="space-y-3">
-                <button className="w-full bg-white border rounded-lg py-2 px-4 flex items-center justify-center gap-2 hover:bg-gray-50 transition-colors">
+                <button
+                  className="w-full bg-white border rounded-lg py-2 px-4 flex items-center justify-center gap-2 hover:bg-gray-50 transition-colors"
+                  onClick={() => navigate("/RepositoryPage")}
+                >
                   <Github className="w-5 h-5" />
                   Sign in with Github
                 </button>
-                <button className="w-full bg-white border rounded-lg py-2 px-4 flex items-center justify-center gap-2 hover:bg-gray-50 transition-colors">
+                <button
+                  className="w-full bg-white border rounded-lg py-2 px-4 flex items-center justify-center gap-2 hover:bg-gray-50 transition-colors"
+                  onClick={() => navigate("/RepositoryPage")}
+                >
                   <img
                     src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRpxEQ0uIkbMszowTDvYTnCamahLRDwajS4Kg&s"
                     alt="Bitbucket"
@@ -140,7 +145,10 @@ const SigninPage = () => {
                   />
                   Sign in with Bitbucket
                 </button>
-                <button className="w-full bg-white border rounded-lg py-2 px-4 flex items-center justify-center gap-2 hover:bg-gray-50 transition-colors">
+                <button
+                  className="w-full bg-white border rounded-lg py-2 px-4 flex items-center justify-center gap-2 hover:bg-gray-50 transition-colors"
+                  onClick={() => navigate("/RepositoryPage")}
+                >
                   <img
                     src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQZ_wk-5cfKPkf-drcZsHvUCJu08PYV_OY80Q&s"
                     alt="Azure"
@@ -148,18 +156,27 @@ const SigninPage = () => {
                   />
                   Sign in with Azure Devops
                 </button>
-                <button className="w-full bg-white border rounded-lg py-2 px-4 flex items-center justify-center gap-2 hover:bg-gray-50 transition-colors">
+                <button
+                  className="w-full bg-white border rounded-lg py-2 px-4 flex items-center justify-center gap-2 hover:bg-gray-50 transition-colors"
+                  onClick={() => navigate("/RepositoryPage")}
+                >
                   <Gitlab className="w-5 h-5" />
                   Sign in with GitLab
                 </button>
               </div>
             ) : (
               <div className="space-y-3">
-                <button className="w-full bg-white border rounded-lg py-2 px-4 flex items-center justify-center gap-2 hover:bg-gray-50 transition-colors">
+                <button
+                  className="w-full bg-white border rounded-lg py-2 px-4 flex items-center justify-center gap-2 hover:bg-gray-50 transition-colors"
+                  onClick={() => navigate("/RepositoryPage")}
+                >
                   <Gitlab className="w-5 h-5" />
                   Self Hosted GitLab
                 </button>
-                <button className="w-full bg-white border rounded-lg py-2 px-4 flex items-center justify-center gap-2 hover:bg-gray-50 transition-colors">
+                <button
+                  className="w-full bg-white border rounded-lg py-2 px-4 flex items-center justify-center gap-2 hover:bg-gray-50 transition-colors"
+                  onClick={() => navigate("/RepositoryPage")}
+                >
                   <Key className="w-5 h-5" />
                   Sign in with SSO
                 </button>
