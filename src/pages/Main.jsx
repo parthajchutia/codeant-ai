@@ -97,7 +97,7 @@ const RepositoryPage = () => {
                 alt="CodeAnt AI Logo"
                 className="w-9 h-9 rounded-full"
               />{" "}
-              <span className="font-light text-3xl">CodeAnt AI</span>{" "}
+              <span className="font-light text-3xl">AI driven mgmt</span>{" "}
             </div>{" "}
             <button
               onClick={() => setIsUserDropdownOpen(!isUserDropdownOpen)}
