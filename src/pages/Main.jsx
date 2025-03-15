@@ -103,7 +103,7 @@ const RepositoryPage = () => {
               onClick={() => setIsUserDropdownOpen(!isUserDropdownOpen)}
               className="flex items-center  rounded-lg w-96 gap-2 px-3 py-2  mt-4 ml-4  hover:bg-white"
             >
-              <span className="ml-6">UtkarshDhairyaPanwar</span>
+              <span className="ml-6">USER NAME</span>
               <ChevronDown size={16} />
             </button>
             {isUserDropdownOpen && (
