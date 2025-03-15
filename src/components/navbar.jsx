@@ -53,7 +53,7 @@ const SidebarNav = ({ isSidebarOpen, setIsSidebarOpen }) => {
             onClick={() => setIsUserDropdownOpen(!isUserDropdownOpen)}
             className="flex items-center border-2 rounded-lg gap-2 px-3 mr-6 py-2 ml-5 mt-4 mb-3 hover:bg-gray-100"
           >
-            <span className="hidden md:inline">UtkarshDhairyaPanwar</span>
+            <span className="hidden md:inline">AI driven Mgmt</span>
             <ChevronDown size={16} />
           </button>
 
